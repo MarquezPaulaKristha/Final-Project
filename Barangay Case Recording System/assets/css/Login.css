@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://unicons.iconscout.com/release/v2.1.9/css/unicons.css");
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    cursor: pointer;
+    transition: all 200ms linear;
+  }
+body {
+    margin: 0;
+}
+  .section_login img{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .link {
+    color: #c4c3ca;
+  }
+  
+  .link:hover{
+    color: black;
+  }
+  
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  h4 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #101010;
+    margin-left: 10.5rem;
+    margin-bottom: 30px;
+  }
+  
+  h6 span{
+    position: center;
+    padding: 40px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .full-height{
+    min-height: 100vh;
+  }
+  .btn_back {
+    position: relative;
+    color: #94c5cc;
+    float: left;
+    border-radius: 4px;
+    height: 30px;
+    width: 30px;
+    font-size: 13px;
+    top: 10px;
+    left: 10px;
+  }
+  .card-3d-wrap {
+    padding-right: 300px;
+    width: 440px;
+    max-width: 100%;
+    height: 400px;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    margin-top: 60px;
+  }
+  
+  .card-3d-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 600ms ease-out;
+  }
+  
+  .card-back{
+    position: absolute;
+    width: 450px;
+    height: 390px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 #94c5cc;
+    border-radius: 6px;
+    float: right;
+    left: 800px;
+    top: 110px;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    z-index: 777;
+  }
+  
+  .center-wrap {
+    position: absolute;
+    width: 100%;
+    padding: 0 35px;
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 35px);
+    perspective: (100%);
+    z-index: 20;
+    display: block;
+  }
+  
+  .form-group{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-style {
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    padding:  13px 20px;
+    height: 40px;
+    padding-left: 55px;
+    margin-bottom: 10px;
+    width: 310px;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    transition: all 200ms linear;
+    box-shadow: 0 4px 8px 0 #94c5cc;
+  }
+  
+  .form-style:focus{
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+  }
+  
+  .input-icon{
+    position: absolute;
+    margin-top: 11px;
+    display: inline-block;
+    left: 5px;
+    height: 48px;
+    font-size: 30px;
+    line-height: 48px;
+    text-align: left;
+    color: #000000;
+    transition: all 200ms linear;
+  }
+  
+  input:focus::-webkit-input-placeholder{
+    opacity: 0;
+    transition: all 200ms linear;
+  }
+
+  .btn-box{
+    margin: 0 0 0 143px;
+  }
+  
+  .btn_submit{
+    margin-top: 10px;
+    background-color: #101010;
+    color: #ffffff;
+    border-radius: 4px;
+    height: 44px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 200ms linear;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
+  } 
+
+  .btn_submit:hover {
+    background-color: #94c5cc;
+    color: #ffffff;
+    box-shadow: 0 8px 24px 0 rgba(15, 39, 112, 0.2);
+  }
