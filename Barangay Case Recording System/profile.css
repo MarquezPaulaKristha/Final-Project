@@ -1,0 +1,133 @@
+.profile-card {
+    position: relative;
+    height: 460px;
+    width: 400px;
+    background-color: #fff;
+    margin: 100px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile-header {
+    position: absolute;
+    height: 220px;
+    width: 76%;
+    margin:0 auto;
+    left: 0;
+    right: 0;
+    top: -30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: linear-gradient(to right, #1dd1a1, #1abc9c);
+}
+
+.profile-header img {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    left: 90px;
+    top: 22px;
+}
+
+.profile-header h3 {
+    position: absolute;
+    font-family: sans-serif;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    top: 118px;
+    left: 90px;
+}
+
+.profile-header p {
+    position: absolute;
+    font-family: sans-serif;
+    color: rgb(236, 233, 233);
+    font-size: 13px;
+    top: 166px;
+    left: 90px
+}
+
+.profile-body {
+    position: absolute;
+    height: 126px;
+    left: 5px;
+    right: 5px;
+    top: 52%;
+    border-radius: 12px;
+}
+
+.profile-body ul {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+.profile-body ul li {
+    position: absolute;
+    list-style: none;
+    display: block;
+    height: 40px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.profile-body ul li p,
+h3,
+i {
+    position: absolute;
+}
+
+.profile-body ul li h3 {
+    top: -17px;
+    left: 58px;
+    color: #16a085;
+}
+
+.profile-body ul li p {
+    top: 14px;
+    left: 59px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #16a085;
+}
+
+.profile-body ul li i {
+    left: 8px;
+    top: 7px;
+    color: #16a085;
+    font-size: 26px;
+}
+
+.profile-body ul li:nth-child(1) {
+    top: -16px;
+}
+
+.profile-body ul li:nth-child(2) {
+    top: 26px;
+}
+
+.profile-body ul li:nth-child(3) {
+    top: 68px;
+}
+
+.profile-body ul li:nth-child(1) i {
+    left: 12px;
+}
+
+.profile-body li:hover {
+    background-color: #16a085;
+    cursor: pointer;
+}
+
+.profile-body li:hover i{color:#fff}
+.profile-body li:hover h3{color:#fff}
+.profile-body li:hover p{color:#fff}
