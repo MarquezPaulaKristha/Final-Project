@@ -19,4 +19,4 @@ SR-Code  | Member  |  Grade  |  Designation  |
 21-09064@g.batstate-u.edu.ph  | Macaraig Robelyn B.| 10% |  |  
 21-01561@g.batstate-u.edu.ph  | Magsino, Charles Dave E.| 5% |  |  
 21-04352@g.batstate-u.edu.ph  | Pagayunan, Jomielle N. | 10% |  |  
- | Total | 100% |  |  
+ | Total |  | 100% |  
