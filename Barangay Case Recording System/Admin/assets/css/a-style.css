@@ -1,0 +1,1157 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #101010;
+  --white: #f8f8f8;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* =============== Navigation ================ */
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation.active {
+  width: 80px;
+}
+
+.navigation a.active {
+  background-color: #94c5cc;
+  color: #101010;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.profile {
+  position: absolute;
+  top: 35.8rem;
+  left: 5px;
+  width: 267px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: #94c5cc;
+}
+
+.profile a{
+  position: absolute;
+  top: 18px;
+  left: 78px;
+}
+
+.profile img{
+  position: relative;
+  top: 6px;
+  left: 13px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #8a8a8a;
+}
+.navigation ul li:hover a/*,
+.navigation ul li.hovered a*/ {
+  color: #b4d2e7;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+
+.navigation ul li a .title,.icon-title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.icon-title {
+  font-size: 30px;
+}
+
+/* ===================== Main ===================== */
+.main{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+.main.active {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label {
+  position: relative;
+  width: 100%;
+}
+
+.search label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid var(--black2);
+}
+
+.search label ion-icon {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.2rem;
+}
+
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======================= Cards ====================== */
+.cardBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.cardBox .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+.cardBox .card .cardName {
+  color: var(--black2);
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+  font-size: 3.5rem;
+  color: var(--black2);
+}
+
+.cardBox .card:hover {
+  background: var(--blue);
+}
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+  color: var(--white);
+}
+
+/* ================== Chart ============== */
+
+.graphBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 25px;
+  min-height: 300px;
+}
+
+.graphBox .box {
+  position: relative;
+  background: var(--white);
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+.graph {
+  position: relative;
+  width: 75%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+  min-height: 300px;
+}
+
+.graph .piegraph {
+  position: relative;
+  background: var(--white);
+  padding: 20px;
+  width: 75%;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  left: 15rem;
+}
+
+.graph .bargraph {
+  position: relative;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  left: 10rem;
+}
+  .graph .gendergraph {
+    position: relative;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    left: 10rem;
+}
+
+@media (max-width: 991px) {
+  .graphBox {
+    grid-template-columns: 1fr;
+    height: auto;
+    justify-content: center;
+  }
+}
+/* ================== Order Details List ============== */
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  /* margin-top: 10px; */
+}
+
+.details .recentOrders {
+  position: relative;
+  min-height: 10px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+.details .cardHeader {
+  height: -50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.cardHeader h2 {
+  font-weight: 600;
+  color: var(--blue);
+}
+.cardHeader .btn {
+  position: relative;
+  padding: 5px 10px;
+  background: var(--blue);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+
+.details table thead td {
+  font-weight: 600;
+}
+.details .recentOrders table tr {
+  color: var(--black1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  
+}
+.details .cases-details .recentOrders table tr:last-child {
+  border-bottom: none;
+}
+.details .recentOrders table tbody tr:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+.details .recentOrders table tr td {
+  padding: 10px;
+}
+.details .recentOrders table tr td:last-child {
+  text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2) {
+  text-align: end;
+}
+.details .recentOrders table tr td:nth-child(3) {
+  text-align: center;
+}
+.status.solved {
+  padding: 2px 25px;
+  background: #8de02c;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status.pending {
+  padding: 2px 25px;
+  background: #f00;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status.ongoing {
+  padding: 2px 25px;
+  background: #1795ce;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  
+}
+
+.recentCustomers {
+  position: relative;
+  padding: 20px;
+  background: var(--white);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+.recentCustomers .imgBx {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.recentCustomers .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recentCustomers table tr td {
+  padding: 12px 10px;
+}
+.recentCustomers table tr td h4 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+.recentCustomers table tr td h4 span {
+  font-size: 14px;
+  color: var(--black2);
+}
+.recentCustomers table tr:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+.recentCustomers table tr:hover td h4 span {
+  color: var(--white);
+}
+/* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+  .graphBox {
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 75%;
+  }
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+  .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+  .recentOrders {
+    overflow-x: auto;
+  }
+  .status.ongoing {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 550px) {
+  .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardHeader h2 {
+    font-size: 20px;
+  }
+  .user {
+    min-width: 40px;
+  }
+}
+
+/* ====================== Fillup Design ========================== */
+
+.fillup-container{
+  position: absolute;
+  top: 70px;
+  left: 350px;
+  max-width: 950px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  transition: 0.5s;
+  background-color: #fff; 
+  box-shadow: 0 5px 10px rgba(0,0,0,0);
+}
+
+.fillup-container.active{
+  width: calc(100% - 250px);
+  left: 230px;
+}
+
+.fillup-container header{
+
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.fillup-container header::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: #4070f4;
+}
+
+.fillup-container form{
+  position: relative;
+  margin-top: 16px;
+  min-height: 490px;
+  background-color: #fff;
+}
+
+.fillup-container form .fdetails{
+  margin-top: 30px;
+}
+
+.fillup-container form .ID{
+  margin-top: 20px;
+}
+
+.fillup-container form .ftitle{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: #333;
+}
+
+.fillup-container form .fields{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form {
+  justify-content: center;
+}
+
+form .fields .input-field{
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.input-field label{
+  font-size: 12px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+.input-field input{
+  outline: none;
+  font-size: 14px;
+  font-size: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+
+.input-field input:is(:focus, :valid){
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.input-field input[type="date"]{
+  color: #707070;
+}
+
+.input-field input[type="date"]:valid{
+  color: #333;
+}
+
+.fillup-container form button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #2d3142;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+form button:hover{
+  background-color: #cbc0b4;
+}
+
+form button ion-icon {
+  margin: 0 6px;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .fillup-container {
+    width: 100%;
+    left: 0;
+  }
+  .fillup-container.active {
+    left: 300px;
+  }
+
+  }
+@media (max-width: 768px) {
+  .fillup-container form{
+      overflow-y: scroll;
+      position: relative;
+  }
+  .fillup-container form::-webkit-scrollbar{
+      display: none;
+  }
+  form .fields .input-field{
+      width: calc(100% / 2 - 15px);
+  }
+  .fdetails {
+    grid-template-columns: 1fr;
+  }
+  .recentOrders {
+    overflow-x: auto;
+  }
+  .status.ongoing {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 550px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .fillup-container form{
+      overflow-y: scroll;
+  }
+  .fillup-container form::-webkit-scrollbar{
+      display: none;
+  }
+  form .fields .input-field{
+      width: 100%;
+  }
+  .fillup-container {
+      top: 50px;
+  }
+  .fillup-container .active {
+      left: -300px;
+  }
+}
+
+/*----------------User Design--------------------*/
+
+.modal {
+  z-index:999;
+  display:flex;
+}
+.pop-container{
+  position: absolute;
+  top: 20px;
+  left: 400px;
+  max-width: 500px;
+  width: 100%;
+  height: 600px;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  transition: 0.5s;
+  background-color: #fff; 
+  box-shadow: 0 5px 10px rgba(0,0,0,0);
+}
+
+.pop-container a{
+  float: right;
+  font-size: 30px;
+}
+
+.pop-container form .fields{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.pop-container form .lodetails{
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.pop-container form .lotitle{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: #333;
+}
+
+.pop-container .fields .loinput-field{
+  display: flex;
+  width: calc(100% / 2 - 15px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.loinput-field label{
+  font-size: 12px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+.loinput-field input,select{
+  outline: none;
+  font-size: 14px;
+  font-size: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+
+.pop-container form button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #2d3142;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.loinput-field input:is(:focus, :valid){
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.loinput-field input[type="date"]{
+  color: #707070;
+}
+
+.loinput-field input[type="date"]:valid{
+  color: #333;
+}
+
+/*-------------------Cases Design-------------------*/
+.cases-details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-gap: 30px;
+}
+
+.cases-details .recentOrders {
+  position: relative;
+  min-height: 500px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+.cases-details .cardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cases-details table {
+  width: 100%;
+  margin-top: 10px;
+}
+.cases-details table thead td {
+  font-weight: 600;
+}
+.cases-details .recentOrders table tr {
+  color: var(--black1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cases-details .recentOrders table tr:last-child {
+  border-bottom: none;
+}
+.cases-details .recentOrders table tbody tr:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+.cases-details .recentOrders table tr td {
+  padding: 10px;
+}
+.cases-details .recentOrders table tr td:last-child {
+  text-align: end;
+}
+.cases-details .recentOrders table tr td:nth-child(2) {
+  text-align: end;
+}
+.cases-details .recentOrders table tr td:nth-child(3) {
+  text-align: center;
+}
+
+/*-------------Modal Box-------------*/
+
+.cardHeader a{
+  display: inline-block;
+  text-decoration: none;
+  background-color: #101010;
+  padding: 15px;
+  border-radius: 15px;
+  text-decoration: uppercase;
+  color: #fff;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(77, 77, 77, 0.7);
+  transition: all 0.4s;
+}
+
+.modal-container{
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  max-width: 900px;
+  width: 100%;
+  height: 600px;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  transition: 0.5s;
+  background-color: #fff; 
+  box-shadow: 0 5px 10px rgba(0,0,0,0);
+}
+
+.modal-container a{
+  float: right;
+  font-size: 30px;
+}
+
+
+.modal-container header{
+
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-container header::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: #4070f4;
+}
+
+.modal-container form{
+  position: relative;
+  margin-top: 16px;
+  min-height: 490px;
+  background-color: #fff;
+}
+
+.modal-container form .fdetails{
+  margin-top: 30px;
+}
+
+.modal-container form .ID{
+  margin-top: 20px;
+}
+
+.modal-container form .ftitle{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: #333;
+}
+
+.modal-container form .fields{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.modal-container form button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #2d3142;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+form .fields .modal-input-field{
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.modal-input-field label{
+  font-size: 12px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+.modal-input-field input{
+  outline: none;
+  font-size: 14px;
+  font-size: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.modal-input-field input:is(:focus, :valid){
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.modal-input-field input[type="date"]{
+  color: #707070;
+}
+
+.modal-input-field input[type="date"]:valid{
+  color: #333;
+}
+
+.profile-card {
+  position: relative;
+  height: 350px;
+  width: 400px;
+  background-color: #fff;
+  margin: 100px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile-header {
+  position: absolute;
+  height: 220px;
+  width: 76%;
+  margin:0 auto;
+  left: 0;
+  right: 0;
+  top: -80px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-image: linear-gradient(to right, #1dd1a1, #1abc9c);
+}
+
+.profile-header img {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  left: 90px;
+  top: 22px;
+}
+
+.profile-header h3 {
+  position: relative;
+  font-family: sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  top: 147px;
+  text-align: center;
+}
+
+.profile-header p {
+  position: relative;
+  font-family: sans-serif;
+  color: rgb(236, 233, 233);
+  font-size: 18px;
+  top: 150px;
+  text-align: center;
+}
+
+.profile-body {
+  position: absolute;
+  height: 126px;
+  left: 5px;
+  right: 5px;
+  top: 52%;
+  border-radius: 12px;
+}
+
+.profile-body ul {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+
+.profile-body ul li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: all .3s ease-in-out;
+}
+
+
+
+.profile-body ul li h3 {
+  top: -17px;
+  text-align: center;
+  color: #16a085;
+}
+
+.profile-body ul li p {
+  top: 18px;
+  left: 59px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #16a085;
+}
+
+.profile-body ul li i {
+  left: 8px;
+  top: 7px;
+  color: #16a085;
+  font-size: 26px;
+}
+
+.profile-body ul li:nth-child(1) {
+  top: -16px;
+}
+
+.profile-body ul li:nth-child(2) {
+  top: 26px;
+}
+
+.profile-body ul li:nth-child(3) {
+  top: 68px;
+}
+
+.profile-body ul li:nth-child(1) i {
+  left: 12px;
+}
+
+.profile-body li:hover {
+  background-color: #16a085;
+  cursor: pointer;
+}
+
+.profile-body li:hover i{color:#fff}
+.profile-body li:hover h3{color:#fff}
+.profile-body li:hover p{color:#fff}
